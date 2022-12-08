@@ -7,6 +7,8 @@
   --dark-color: #3a3d3e;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 *,
 *::before,
 *::after {
@@ -68,6 +70,44 @@ header {
   background-image: linear-gradient(-45deg, #ad8b73, #ceab93, #e3caa5, #fffbe9);
 }
 
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 24rem;
+  gap: 4em;
+  /* border: 1px solid red; */
+}
+
+.btn-play {
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 4.8rem;
+}
+
+.btn-anthem {
+  display: inline-block;
+  width: 100%;
+  max-width: 7.2rem;
+  text-align: center;
+  padding: 0.2em 0.4em;
+  /* background-color: var(--clr-bg-dark); */
+  text-decoration: none;
+  /* color: var(--clr-accent); */
+  color: var(--clr-text);
+  text-transform: capitalize;
+}
+
+.btn-pause {
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 4.8rem;
+  /* position: absolute;
+  justify-content: flex-start;*/
+  display: none;
+}
+
 .menu-btns {
   display: flex;
   gap: 1.2em;
@@ -117,6 +157,8 @@ main {
   background-size: cover;
   font-weight: 600;
   color: var(--clr-text);
+  font-family: 'Open Sans', sans-serif;
+
   /*
   background-repeat: no-repeat; */
   /* padding: 2.4rem 1.2rem; */
@@ -161,23 +203,26 @@ section::before {
   margin-bottom: 1.6rem;
   /* max-width: 48rem; */
   max-width: 48rem;
-
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   /* display: none; */
   visibility: hidden;
   /* margin-top: 9.6rem; */
   /* padding: 12rem 2.4rem; */
+  font-family: 'Open Sans', sans-serif;
   color: #3b3b3b;
 
   /* edit v2 */
   font-size: 0.1rem;
   padding: 4em 16em;
   background-color: var(--clr-text);
+  /* background-color: #ffc69e; */
 }
 
 .main-header {
   font-size: 3.6rem;
   text-transform: capitalize;
   color: #e30a17;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .main-description {
@@ -353,6 +398,40 @@ section {
     background-position-y: -20rem;
   }
 
+  .header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24rem;
+    gap: 4em;
+    /* border: 1px solid red; */
+  }
+
+  .btn-icons {
+    display: flex;
+    gap: 1em;
+    width: 12rem;
+    border: 1px solid red;
+  }
+
+  .btn-play {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 4.8rem;
+  }
+
+  .btn-visible {
+    display: block;
+  }
+
+  .btn-pause {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 4.8rem;
+    /* position: absolute;
+    justify-content: flex-start;*/
+    display: none;
+  }
   .section-3::before {
     background-position-x: 0;
     background-position-y: -72rem;
