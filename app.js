@@ -32,6 +32,7 @@ function pauseAnthem() {
   btnAnthem.addEventListener('click', function (e) {
     anthem.pause();
     btnPlay.style.display = 'block';
+    btnPlay.style.display = 'none';
   });
 }
 
