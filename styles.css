@@ -30,6 +30,9 @@ body {
 }
 
 .go-up {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .icon-up {
@@ -119,14 +122,26 @@ main {
   /* padding: 2.4rem 1.2rem; */
 }
 
+.video-cappadocia {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* filter: blur(4px); */
+  object-fit: cover;
+}
+
 main::before,
 section::before {
   background-image: url(background.jpg);
+  /* background: url(cappadocia.mp4); */
   filter: blur(4px);
   z-index: -1;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   position: absolute;
   background-size: cover;
   /* opacity: 0.3; */
@@ -142,18 +157,27 @@ section::before {
   text-align: justify;
   gap: 4.8em;
   width: 100%;
+  border-radius: 9px;
+  margin-bottom: 1.6rem;
   /* max-width: 48rem; */
   max-width: 48rem;
 
+  /* display: none; */
+  visibility: hidden;
   /* margin-top: 9.6rem; */
   /* padding: 12rem 2.4rem; */
   color: #3b3b3b;
+
+  /* edit v2 */
+  font-size: 0.1rem;
+  padding: 4em 16em;
+  background-color: var(--clr-text);
 }
 
 .main-header {
   font-size: 3.6rem;
   text-transform: capitalize;
-  color: #3b3b3b;
+  color: #e30a17;
 }
 
 .main-description {
@@ -177,6 +201,24 @@ section::before {
   background-color: white;
   color: var(--clr-bg-dark);
   transition: ease-in-out 0.3s;
+}
+
+.show-modal {
+  visibility: visible;
+
+  /* display: block; */
+  z-index: 10;
+}
+
+button {
+  border: 0;
+  color: var(--clr-text);
+  text-transform: capitalize;
+  background: 0;
+  padding: 1em;
+  cursor: pointer;
+  transform: transition;
+  text-decoration: none;
 }
 
 /* .img-bg {
@@ -245,7 +287,7 @@ section {
   filter: blur(4px);
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   position: absolute;
   background-size: cover;
 }
@@ -262,7 +304,7 @@ section {
   filter: blur(2px);
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   position: absolute;
   background-size: cover;
 }
@@ -280,7 +322,7 @@ section {
   filter: blur(1px);
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   position: absolute;
 }
 
@@ -295,6 +337,10 @@ section {
   section {
     background-position-x: 0rem;
     background-position-y: 0rem;
+  }
+
+  .main-info {
+    padding: 24em 48em;
   }
 
   .section-1::before {
