@@ -2,11 +2,33 @@
 
 const showBtn = document.querySelector('.btn-show');
 const modal = document.querySelector('.main-info');
-const btnAnthem = document.querySelector('.btn-anthem');
-const anthem = document.querySelector('.anthem');
-const btnPlay = document.querySelector('.btn-play');
-const btnPause = document.querySelector('.btn-pause');
-const btnVisible = document.querySelector('.btn-visible');
+// const btnAnthem = document.querySelector('.btn-anthem');
+
+// const btnPlay = document.querySelector('.play');
+// const btnPause = document.querySelector('.pause');
+// const btnVisible = document.querySelector('.btn-visible');
+
+const track = document.getElementById('track');
+const controlBtn = document.getElementById('play-pause');
+
+window.addEventListener('DOMContentLoaded', function () {
+  displayModal();
+});
+
+function playPause() {
+  if (track.paused) {
+    track.play();
+    controlBtn.className = 'pause';
+  } else {
+    track.pause();
+    controlBtn.className = 'play';
+  }
+}
+
+controlBtn.addEventListener('click', playPause);
+track.addEventListener('ended', function () {
+  controlBtn.className = 'play';
+});
 
 function displayModal() {
   showBtn.addEventListener('click', function (e) {
@@ -15,28 +37,3 @@ function displayModal() {
     console.log('hello world');
   });
 }
-
-function displayAnthem() {
-  btnPlay.addEventListener('click', function (e) {
-    anthem.play();
-    btnPlay.style.display = 'none';
-    btnPause.style.display = 'block';
-  });
-
-  btnPause.addEventListener('click', function (e) {
-    anthem.pause();
-  });
-}
-
-function pauseAnthem() {
-  btnAnthem.addEventListener('click', function (e) {
-    anthem.pause();
-    btnPlay.style.display = 'block';
-    btnPlay.style.display = 'none';
-  });
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-  displayModal();
-  displayAnthem();
-});

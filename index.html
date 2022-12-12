@@ -4,36 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="logo.svg">
+    <link rel="icon" type="image/x-icon" href="svg/logo.svg">
     <title>scroll</title>
   </head>
   <body>
     <header>
       <div class="header-left">
-        <div class="logo"><img src="logo.svg" alt="logo" /></div>
-        <button class="btn-anthem">
-          <audio class="anthem">
+        <div class="logo"><img src="svg/logo.svg" alt="logo" /></div>
+        <!-- <button class="btn-anthem">  </button> -->
+          <audio id="track">
             <source  src="anthem.mp3" type="audio/mp3">
           </audio>
 
-          <div class="btn-icons">
-            <svg xmlns="http://www.w3.org/2000/svg" class="btn-play" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <div id="player-container">
+            <div id="play-pause" class="play"></div>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="btn-play" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
             </svg>
     
             <svg class="btn-pause" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            </svg> -->
           </div>
 
-      </button>
+    <!--</button> -->
+
       </div>
       <nav class="menu-btns">
         <a href="" class="nav__link">home</a>
-        <a href="#about-us" class="nav__link">about</a>
-        <a href="#our-services" class="nav__link">services</a>
-        <a href="#featured-tours" class="nav__link">tours</a>
+        <a href="#about-us" class="nav__link">galata</a>
+        <a href="#our-services" class="nav__link">Kız K.</a>
+        <a href="#featured-tours" class="nav__link">Cami</a>
       </nav>
     </header>
     <main id="home">
@@ -47,9 +49,9 @@
         </p>
       </div>
 
-      <div class="menu-btns">
-      <button><a href="#featured-tours" class="btn">explore tours</a></button>
-      <button><a href="" class="btn btn-show">show info</a></button>
+      <div class="main-btns">
+      <button class="main-btn"><a href="#featured-tours" class="btn">explore tours</a></button>
+      <button class="main-btn"><a href="" class="btn btn-show">show info</a></button>
       </div>
 
     </main>
@@ -108,6 +110,47 @@
       </section>
     </div>
     </article>
+
+<footer>
+  <div class="footer__item address">
+
+  <div class="address-list">
+    <span class="address-item">ismet inönü bulvarı no:32</span>
+    <span class="address-item">06100 emek / ankara</span>
+  </div>
+
+  <div class="address-list-2">
+    <span class="address-item-2">+90 (312) 4708000</span>
+    <span class="address-item-2">alo 176 iletişim merkezi</span>
+  </div>
+
+</div>
+
+<div class="sub-container">
+
+  <div class="footer__item sub-headers">
+<button class="sub-item"><a class="sub-link" href="">seyahat acentası arama</a></button>
+<button class="sub-item"><a class="sub-link" href="">Etik Komisyonu</a></button>
+<button class="sub-item"><a class="sub-link" href="">Hizmet Envanteri</a></button>
+<button class="sub-item"><a class="sub-link" href="">Dilek ve Şikayetleriniz</a></button>
+<button class="sub-item"><a class="sub-link" href="">SSS</a></button>
+<button class="sub-item"><a class="sub-link" href="">KVKK Aydınlatma Metni</a></button>
+<button class="sub-item"><a class="sub-link" href="">Site Ağacı</a></button>
+  </div>
+
+  <div class="footer__item sub-headers">
+<button class="sub-item"><a class="sub-link" href="">Kamu Hizmet Standartları</a></button>
+<button class="sub-item"><a class="sub-link" href="">Evrak Doğrulama</a></button>
+<button class="sub-item"><a class="sub-link" href="">Kurumsal Uygulamalar</a></button>
+<button class="sub-item"><a class="sub-link" href="">Site Kullanım Koşulları (Yasal Uyarı)</a></button>
+<button class="sub-item"><a class="sub-link" href="">Webmail</a></button>
+<button class="sub-item"><a class="sub-link" href="">Bilgi Güvenliği Politikası</a></button>
+<button class="sub-item"><a class="sub-link" href="">Intranet</a></button>
+  </div>
+</div>
+<div class="last-item"></div>
+</footer>
+
   </body>
   <script src="app.js"></script>
 </html>
